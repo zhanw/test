@@ -28,5 +28,8 @@ public class Test1 {
     Assert.assertEquals(4, 2+2);
   }
 
+  public void test3(){
+    Assert.assertFalse(4 == 2);
+  }
 
 }
