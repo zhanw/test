@@ -27,7 +27,7 @@ before_script:
   
 script:
  # - ./gradlew build connectedCheck
-  - ./gradlew connectedAndroidTest
+  - ./gradlew connectedAndroidTest --info
  
 cache:
   directories:

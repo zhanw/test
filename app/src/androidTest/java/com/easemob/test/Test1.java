@@ -2,7 +2,10 @@ package com.easemob.test;
 
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.SmallTest;
+import android.util.Log;
+
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -23,11 +26,18 @@ public class Test1 {
 
   }
 
-  @Test
-  public void test2(){
-    Assert.assertEquals(4, 2+2);
+  @BeforeClass
+  public static void classBefore(){
+    Log.d("aa", "before class");
   }
 
+  @Test
+  public void test2(){
+    Log.d("aa", "exe test2()");
+    Assert.assertEquals(4, 3+2);
+  }
+
+  @Test
   public void test3(){
     Assert.assertFalse(4 == 2);
   }
