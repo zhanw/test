@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.hyphenate.chat.EMClient;
+
 public class MainActivity extends AppCompatActivity {
 
   @Override protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
             .show();
       }
     });
+
+    EMClient.getInstance().init(this, null);
   }
 
   @Override public boolean onCreateOptionsMenu(Menu menu) {
